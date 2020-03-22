@@ -172,13 +172,7 @@ pp(response)
 
 
 ## The lamba function ...
-- creates working directory on lambda instance
-- gets flyway software from s3
-- installs flyway
-    - get from s3
-    - unzips locally
-    - installs
-    - confirms installation
+- uses flyway in a lambda layer
 - gets sql scripts
     - get from s3
     - unzip on local filesystem
