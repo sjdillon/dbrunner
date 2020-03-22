@@ -23,7 +23,6 @@
    - Its executed at the command line, runs against a remote database and returns the status of the execution.
    - Flyway maintains the history of each execution in metadata tables within the database it is run against.
 
-    -
 
 
 
@@ -51,7 +50,7 @@ example:
 
 script:
 ```python
-%load sql\V1__Create_person_table.sql
+## sql\\V1__Create_person_table.sql
 create table PERSON (
     ID int not null,
     NAME varchar(100) not null
@@ -60,7 +59,7 @@ create table PERSON (
 
 
 ```python
-!flyway migrate -url=jdbc:mariadb://$endpoint:3306 -user=culdeedba -password=$pw -schemas=culdee_test1
+flyway migrate -url=jdbc:mariadb://$endpoint:3306 -user=culdeedba -password=$pw -schemas=culdee_test1
 ```
 
 
@@ -78,7 +77,7 @@ Info lets you know where you stand. At a glance you will see which migrations ha
 
 
 ```python
-!flyway info -url=jdbc:mariadb://$endpoint:3306 -user=culdeedba -password=$pw -schemas=culdee_test1
+flyway info -url=jdbc:mariadb://$endpoint:3306 -user=culdeedba -password=$pw -schemas=culdee_test1
 ```
 
     Flyway Community Edition 5.2.1 by Boxfuse
